@@ -13,7 +13,7 @@ function Searchbar() {
             aria-label="Search"
           />
           <button className="btn btn-outline-success ml-2" type="submit">
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
           </button>
         </form>
       </div>
