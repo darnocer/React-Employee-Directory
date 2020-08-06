@@ -21,7 +21,7 @@ function DataBody({ users }) {
                 <img
                   src={picture.medium}
                   alt={"profile image for " + name.first + " " + name.last}
-                  className="img-responsive"
+                  className="img img-responsive"
                 />
               </td>
               <td data-th="Name" className="name-cell align-middle">

@@ -11,11 +11,11 @@ class DataArea extends Component {
   };
 
   headings = [
-    { name: "Image", width: "10%" },
-    { name: "Name", width: "10%" },
+    { name: "", width: "5%" },
+    { name: "Name", width: "25%" },
     { name: "Phone", width: "20%" },
     { name: "Email", width: "20%" },
-    { name: "DOB", width: "10%" },
+    { name: "DOB", width: "20%" },
   ];
 
   // handleSort = (heading) => {
@@ -86,7 +86,6 @@ class DataArea extends Component {
     return (
       <>
         {/* <Nav handleSearchChange={this.handleSearchChange} /> */}
-
         <div>
           <DataTable
             headings={this.headings}
