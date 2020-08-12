@@ -3,7 +3,7 @@ import "./style.css";
 
 function Searchbar() {
   return (
-    <div className="container mt-3">
+    <div className="container mt-5">
       <div className="row col-12 justify-content-center">
         <form className="form-inline input-group p-2 searchbar">
           <input

@@ -7,14 +7,14 @@ import Wrapper from "./components/Wrapper";
 
 function App() {
   return (
-    <div>
+    <>
       <Wrapper>
         <Navbar />
         <Searchbar />
         <Main />
         <Footer />
       </Wrapper>
-    </div>
+    </>
   );
 }
 
