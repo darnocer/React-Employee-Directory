@@ -2,8 +2,6 @@ import React from "react";
 import "./style.css";
 
 function Table({ users }) {
-  console.log(users);
-
   function formatDate(date) {
     const newDate = date.slice(0, 10);
     const YYYY = newDate.slice(0, 4);

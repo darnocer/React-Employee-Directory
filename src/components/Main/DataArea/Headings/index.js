@@ -13,7 +13,7 @@ function Headings(props) {
                 <i
                   className="fas fa-sort"
                   data-key={hname}
-                  onClick={props.handleBtnClick}></i>
+                  onClick={props.handleSort}></i>
               ) : (
                 ""
               )}
