@@ -4,16 +4,25 @@ import "./style.css";
 function Table({ users }) {
   console.log(users);
 
+  function formatDate(date) {
+    const newDate = date.slice(0, 10);
+    const YYYY = newDate.slice(0, 4);
+    const MM = newDate.slice(5, 7);
+    const DD = newDate.slice(8, 10);
+    const formattedDate = MM + "/" + DD + "/" + YYYY;
+    return formattedDate;
+  }
+
   return (
     <tbody>
       {users[0] !== undefined && users[0].name !== undefined ? (
-        users.map(({ name, picture, phone, email, dob }) => {
+        users.map(({ name, login, picture, phone, email, dob }) => {
           return (
-            <tr>
+            <tr key={login.uuid}>
               <td className="align-middle">
                 <img
                   src={picture.medium}
-                  alt={name}
+                  alt="profile"
                   className="img img-responsive"
                 />
               </td>
@@ -26,7 +35,7 @@ function Table({ users }) {
                   {email}
                 </a>
               </td>
-              <td className="align-middle">{dob.date}</td>
+              <td className="align-middle">{formatDate(dob.date)}</td>
             </tr>
           );
         })
