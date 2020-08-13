@@ -1,11 +1,11 @@
-/* .navbar-bg {
+.navbar-bg {
   background: rgb(29, 38, 253);
   background: linear-gradient(
     90deg,
-    rgba(29, 38, 253, 1) 26%,
-    rgba(69, 252, 216, 1) 70%
+    rgba(29, 38, 253, 1) 0%,
+    rgba(69, 252, 210, 1) 100%
   );
-} */
+}
 
 .navbar-brand {
   font-size: 5vh;

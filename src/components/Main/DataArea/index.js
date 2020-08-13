@@ -3,7 +3,6 @@ import Headings from "./Headings";
 import Table from "./Table";
 import Search from "../../Search";
 import API from "../../../utils/API";
-import "./style.css";
 
 class DataArea extends Component {
   state = {
