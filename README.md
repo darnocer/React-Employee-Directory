@@ -1,68 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Employee Directory
 
-## Available Scripts
+![last commit](https://img.shields.io/github/last-commit/darnocer/React-Employee-Directory?style=flat-square)
 
-In the project directory, you can run:
+### URL: https://darnocer.github.io/React-Employee-Directory/.
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A simple front-end employee directory built with React.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Table of Contents
 
-### `npm test`
+- [Installation](#installation)
+- [Usage](#usage)
+- [Future Enhancements](#future-enhancements)
+- [Credits](#Credits)
+- [Questions](#questions)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+```
+fork repo
+clone to local machine
+npm i
+npm start
+navigate to http://localhost:3000
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. Click the icons in the column headers to sort or reverse sort each column.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - Name column sorts by first name
+   - DOB column sorts by birth year.
 
-### `npm run eject`
+2. Type in the search bar to filter the list of users
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ![demo](public/images/demo.gif)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Future Enhancements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Improve handling of sorting - split first and last name columns, better deliniation between ascend and descend
+- Improve handling of filter - allow typing of full birthdate
+- Styling enhancements
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Credits
 
-## Learn More
+- [React](https://reactjs.org/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- https://randomuser.me/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Bootstrap](https://getbootstrap.com/)
 
-### Code Splitting
+## Questions?
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Contact me at [darian.nocera26@gmail.com](mailto:darian.nocera26@gmail.com)
 
-### Analyzing the Bundle Size
+or [![Follow on Github](https://img.shields.io/github/followers/darnocer?label=Follow&style=social)](http://www.github.com/darnocer)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Copyright © 2020 [Darian Nocera](http://www.github.com/darnocer)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+##### _Created with [darnocer's README generator](https://github.com/darnocer/Node.js-and-ES6-README-Generator)_ 👽
