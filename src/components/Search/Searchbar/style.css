@@ -1,3 +1,10 @@
 .searchbar {
   max-width: 300px;
 }
+
+.btn-outline-success,
+.btn-outline-success:hover {
+  border-color: #2c7aec !important;
+  color: #2c7aec !important;
+  background-color: white !important;
+}
