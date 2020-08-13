@@ -114,7 +114,7 @@ class DataArea extends Component {
     }
 
     // set the state to be the sortedusers which will re-render the display
-    this.setState({ users: sortedUsers });
+    this.setState({ filteredUsers: sortedUsers });
 
     function reverseSort(sortedUsers) {
       return sortedUsers.reverse();
