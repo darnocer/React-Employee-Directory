@@ -34,10 +34,13 @@ class DataArea extends Component {
     const newSearch = event.target.value.toLowerCase();
     this.setState({ search: newSearch });
     const users = this.state.users;
+    console.log(users);
     const filtered = users.filter(
       (item) =>
         item.name.first.toLowerCase().includes(newSearch) ||
-        item.name.last.toLowerCase().includes(newSearch)
+        item.name.last.toLowerCase().includes(newSearch) ||
+        item.phone.includes(newSearch) ||
+        item.dob.date.slice(0, 10).includes(newSearch)
     );
     this.setState({ filteredUsers: filtered });
   };
