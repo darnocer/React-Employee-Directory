@@ -14,11 +14,11 @@ class DataArea extends Component {
   };
 
   headings = [
-    { hname: "", width: "10%" },
-    { hname: "Name", width: "25%" },
-    { hname: "Phone", width: "20%" },
-    { hname: "Email", width: "20%" },
-    { hname: "DOB", width: "20%" },
+    { hname: "", width: "10%", sort: "descend" },
+    { hname: "Name", width: "25%", sort: "descend" },
+    { hname: "Phone", width: "20%", sort: "descend" },
+    { hname: "Email", width: "20%", sort: "descend" },
+    { hname: "DOB", width: "20%", sort: "descend" },
   ];
 
   componentDidMount() {
@@ -31,10 +31,14 @@ class DataArea extends Component {
   }
 
   handleInputChange = (event) => {
+    // grabs search value entered in input field
     const newSearch = event.target.value.toLowerCase();
+    // updates the search state
     this.setState({ search: newSearch });
+    // current user list
     const users = this.state.users;
     console.log(users);
+    // filters users to those containing search values
     const filtered = users.filter(
       (item) =>
         item.name.first.toLowerCase().includes(newSearch) ||
@@ -42,13 +46,18 @@ class DataArea extends Component {
         item.phone.includes(newSearch) ||
         item.dob.date.slice(0, 10).includes(newSearch)
     );
+    // updates the filtered users
     this.setState({ filteredUsers: filtered });
   };
 
   handleSort = (event) => {
-    const hname = event.target.attributes.getNamedItem("data-key").value;
+    const users = this.state.users;
+
+    let hname = event.target.attributes
+      .getNamedItem("data-key")
+      .value.toLowerCase();
     console.log(hname);
-    // const users = this.state.users;
+
     if (this.state.sort === "descend") {
       this.setState({
         sort: "ascend",
@@ -59,6 +68,34 @@ class DataArea extends Component {
         sort: "descend",
       });
       console.log("updated to descend");
+    }
+
+    if (hname === "name") {
+      console.log(users);
+
+      // let firstNames = users.map((item) => item.name.first);
+
+      let sortedUsers = users.sort((a, b) => {
+        if (a.name.first < b.name.first) {
+          return -1;
+        }
+        if (a.name.first > b.name.first) {
+          return 1;
+        }
+        return 0;
+      });
+
+      if (this.state.sort === "descend") {
+        reverseSort(sortedUsers);
+      }
+
+      console.log(sortedUsers);
+
+      this.setState({ filteredUsers: sortedUsers });
+    }
+
+    function reverseSort(sortedUsers) {
+      return sortedUsers.reverse();
     }
   };
 
